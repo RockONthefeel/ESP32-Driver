@@ -194,7 +194,7 @@ class AW9523B
     void removeEvent(void);
     uint8_t readData(uint8_t Reg);
     void writeData(uint8_t Reg, uint8_t Data);
-    void Solf_Reset(void);
+    void Solft_Reset(void);
 };
 /* USER CODE END ECP */
 

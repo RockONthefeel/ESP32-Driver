@@ -562,7 +562,7 @@ void AW9523B::writeData(uint8_t Reg, uint8_t Data)
  * -- Insert your external function declaration here --
  */
 /* USER CODE BEGIN 17 */
-void AW9523B::Solf_Reset(void)
+void AW9523B::Solft_Reset(void)
 {
   writeI2C(AW9523B_SOFT_RST_REG, 0x00);
 }

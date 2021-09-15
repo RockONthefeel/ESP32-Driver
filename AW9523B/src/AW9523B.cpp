@@ -93,7 +93,7 @@ uint8_t AW9523B::writeI2C(uint8_t Reg, uint8_t Val)
 /* USER CODE BEGIN 2 */
 bool AW9523B::begin(void)
 {
-  AW9523B::Solf_Reset();
+  AW9523B::Solft_Reset();
   delay(10);
   this->_addr = AW9523B_I2C_ADDRESS;
   this->_id = AW9523B::readI2C(AW9523B_ID_REG);
@@ -106,7 +106,7 @@ bool AW9523B::begin(void)
 
 bool AW9523B::begin(bool AD0, bool AD1)
 {
-  AW9523B::Solf_Reset();
+  AW9523B::Solft_Reset();
   delay(10);
   this->_addr = (AW9523B_I2C_ADDRESS | (AD1 << 1)) | AD0;
   this->_id = AW9523B::readI2C(AW9523B_ID_REG);
@@ -119,7 +119,7 @@ bool AW9523B::begin(bool AD0, bool AD1)
 
 bool AW9523B::begin(uint8_t Addr, bool AD0, bool AD1)
 {
-  AW9523B::Solf_Reset();
+  AW9523B::Solft_Reset();
   delay(10);
   this->_addr = (Addr | (AD1 << 1)) | AD0;
   this->_id = AW9523B::readI2C(AW9523B_ID_REG);
